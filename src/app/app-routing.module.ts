@@ -12,7 +12,7 @@ import { EmailAlertComponent } from './email/email-alert/email-alert.component';
 import { EmailConfirmationComponent } from './email/email-confirmation/email-confirmation.component';
 import { EmailInvoiceComponent } from './email/email-invoice/email-invoice.component';
 import { EmailPasswordResetComponent } from './email/email-password-reset/email-password-reset.component';
-import { IndexHostingComponent } from './core/components/index-hosting/index-hosting.component';
+
 
 
 const routes: Routes = [
@@ -22,7 +22,7 @@ const routes: Routes = [
   { path: "our-team", component: OurTeamComponent },
   { path: "careers", component: CareersComponent },
   { path: "contact-us", component: ContactUsComponent },
-  { path: 'index-hosting', component: IndexHostingComponent },
+
 
 
   { path: 'auth-login', component: AuthLoginComponent },
