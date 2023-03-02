@@ -1,0 +1,27 @@
+<section id="themeControl" class="py-2 bg-">
+    <div class="container d-flex justify-content-end align-items-center bg-">
+
+        <!-- ===== S T A R T  T H E M E  L A N G U A G E  C O N T R O L ===== -->
+        <div class="theme-language me-3">
+            <select name="language" id="language" class="form-select form-select-sm"
+                (change)="selectedLang($event.target.value)">
+                <option value="enLgt" *ngIf="!drkMode">English</option>
+                <option value="arLgt" *ngIf="!drkMode">Arabic</option>
+
+                <option value="enDrk" *ngIf="drkMode">English</option>
+                <option value="arDrk" *ngIf="drkMode">Arabic</option>
+            </select>
+        </div>
+        <!-- ===== E N D  T H E M E  L A N G U A G E  C O N T R O L ===== -->
+
+        <!-- ===== S T A R T  T H E M E  M O D E  C O N T R O L ===== -->
+        <div class="theme-mode">
+            <button class="btn btn-sm btn-block btn-dark dark-version t-dark" (click)="setDark()"
+                *ngIf="!drkMode">Dark</button>
+            <button class="btn btn-sm btn-block btn-dark light-version t-light" (click)="setLight()"
+                *ngIf="drkMode">Light</button>
+        </div>
+        <!-- ===== E N D  T H E M E  M O D E  C O N T R O L ===== -->
+
+    </div>
+</section>

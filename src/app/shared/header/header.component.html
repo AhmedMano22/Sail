@@ -1,0 +1,132 @@
+<!-- <app-theme-control (changeMode)="changeMode($event)"></app-theme-control> -->
+
+<!-- TAGLINE START-->
+<!-- <div class="tagline bg-light" *ngIf="sliderTopbar == true">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <div class="text-slider">
+                    <ul class="list-inline mb-0 move-text">
+                        <li class="list-inline-item px-2 mb-0"><b>EOG</b> $ 55.88 <span class="text-success">+$ 4.62 ( +9.01%
+                )</span></li>
+                        <li class="list-inline-item px-2 mb-0"><b>CHKP</b> $ 120.03 <span class="text-danger">-$ 14.07 ( -10.49%
+                )</span></li>
+                        <li class="list-inline-item px-2 mb-0"><b>FANG</b> $ 63.58 <span class="text-success">+$ 5.17 ( +8.84%
+                )</span></li>
+                        <li class="list-inline-item px-2 mb-0"><b>M</b> $ 14.75 <span class="text-success">+$ 1.05 ( +7.66% )</span>
+                        </li>
+                        <li class="list-inline-item px-2 mb-0"><b>PKI</b> $ 139.72 <span class="text-danger">-$ 11.41 ( -7.55%
+                )</span></li>
+                        <li class="list-inline-item px-2 mb-0"><b>ABMD</b> $ 326.23 <span class="text-danger">-$ 21.61 ( -6.21%
+                )</span></li>
+                        <li class="list-inline-item px-2 mb-0"><b>BITCOIN</b> $ 37,471.47 <span class="text-danger">+$ 492.60 (
+                +1.33% )</span></li>
+                        <li class="list-inline-item px-2 mb-0"><b>XRP</b> <span> $ 0.39</span><span class="text-muted"> UNCH</span>
+                        </li>
+                        <li class="list-inline-item px-2 mb-0"><b>LITECOIN</b> <span> $ 148.67</span><span class="text-danger">-$
+                5.58 ( -3.62% )</span></li>
+                        <li class="list-inline-item px-2 mb-0"><b>BITCOIN CASH</b> <span> $ 427.37</span><span class="text-danger">-$ 15.98 ( -3.60% )</span></li>
+                        <li class="list-inline-item px-2 mb-0"><b>ETHEREUM</b> $ 1,647.87 <span class="text-danger">+$ 14.51 (
+                +0.89% )</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> -->
+<!-- TAGLINE END-->
+
+<!-- Navbar STart -->
+<header id="topnav" class="defaultscroll sticky py-1" (window:scroll)="windowScroll()" [class]="navClass" [ngClass]="{'tagline-height': sliderTopbar == true}" [ngStyle]="{'top': windowScrollPosition > 47 ? '0px': '50px'}">
+    <div class="container bg- d-flex flex justify-content-between align-items-center">
+        <!-- Logo container-->
+        <div>
+            <a class="logo" routerLink="/" *ngIf="navClass !== 'nav-light'" class="w-50">
+                <img [src]='logoURL' class="navLogo l-dark logo-light-mode" alt="">
+                <!-- <img [src]='logoURL' class="navLogo logo-dark-mode" alt="" *ngIf="this.darkLogo"> -->
+
+            </a>
+        </div>
+
+
+        <div class="menu-extras">
+            <app-theme-control (changeMode)="changeMode($event)"></app-theme-control>
+            <!-- <div class="menu-item">
+              
+                <a class="navbar-toggle" id="isToggle" (click)="toggleMenu()" [ngClass]="{'open': isCondensed === true}">
+                    <div class="lines">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </a>
+              
+            </div> -->
+        </div>
+
+        <!-- <div id="navigation">
+     
+      <ul class="navigation-menu" [class]="navClass">
+        <li>
+          <a href="javascript:void(0)" (click)="onMenuClick($event)">{{"Borrow"| translate}}</a>
+        </li>
+        <li>
+          <a href="javascript:void(0)" (click)="onMenuClick($event)">{{"Earn"| translate}}</a>
+        </li>
+        <li class="has-submenu">
+          <a href="javascript:void(0)" (click)="onMenuClick($event)">{{"About"| translate}}</a><span
+            class="menu-arrow"></span>
+          <ul class="submenu megamenu">
+            <li>
+              <ul>
+                <li><a class="nav-link-ref" routerLink="/about-us">About Us</a></li>
+                <li><a class="nav-link-ref" routerLink="/our-team">Our Team</a></li>
+              </ul>
+            </li>
+            <li>
+              <ul>
+                <li><a class="nav-link-ref" routerLink="/careers">Careers</a></li>
+                <li><a class="nav-link-ref" routerLink="/contact-us">Contact Us</a></li>
+              </ul>
+            </li>
+            <li>
+              <ul>
+                <li>
+                  <p class="fw-bold">Learn all about Celsius</p>
+                </li>
+                <li>
+                  <p class=" text-muted">Find out why 1 million people<br /> have
+                    already joined Celsius in<br /> pursuit of
+                    financial freedom.
+                  </p>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a routerLink="/" class="nav-link-ref">{{"Care"| translate}}</a>
+        </li>
+
+      </ul>
+      
+
+    </div> -->
+        <!--end navigation-->
+
+        <!-- <div class="navigation-btns ms-1 d-flex  justify-content-center align-items-center">
+      <a routerLink="" class="btn btn-outline-primary me-2 phone position-relative mb-1"><i
+          class="fas fa-phone-alt"></i></a>
+      <div class="d-flex flex-column flex-lg-row">
+        <a routerLink="/auth-login" class="btn btn-outline-primary me-1  mb-1">Login</a>
+        <a routerLink="/auth-signup" class="btn btn-primary  mb-1">Sign Up</a>
+      </div>
+    </div> -->
+
+
+
+    </div>
+    <!--end container-->
+</header>
+<!--end header-->
+<!-- Navbar End -->

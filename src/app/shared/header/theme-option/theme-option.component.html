@@ -1,0 +1,12 @@
+
+<div class=" d-flex justify-content-center align-items-center flex-column mb-2">
+    <!-- light RTL & LTR-->
+    <button class="btn btn-sm btn-block btn-primary rtl-version t-rtl-light mt-2" *ngIf="!leftToRight && !darkTheme" (click)="setLtr()">LTR</button>
+    <button class="btn btn-sm btn-block btn-primary ltr-version t-ltr-light mt-2" *ngIf="leftToRight && !darkTheme" (click)="setRtl()">RTL</button>
+    <!-- dark RTL & LTR-->
+    <button class="btn btn-sm btn-block btn-primary rtl-version t-rtl-light mt-2" *ngIf="!leftToRight && darkTheme" (click)="darkLtr()">LTR</button>
+    <button class="btn btn-sm btn-block btn-primary ltr-version t-ltr-light mt-2" *ngIf="leftToRight && darkTheme" (click)="darkRtl()">RTL</button>
+    <!-- -->
+    <button class="btn btn-sm btn-block btn-dark dark-version t-dark mt-2" *ngIf="!darkTheme" (click)="setDark()">Dark</button>
+    <button class="btn btn-sm btn-block btn-dark light-version t-light mt-2" *ngIf="darkTheme" (click)="setLight()">Light</button>
+</div>
